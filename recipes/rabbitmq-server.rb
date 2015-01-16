@@ -55,7 +55,9 @@ if node['openstack']['mq']['cluster']
 end
 
 include_recipe 'rabbitmq'
-include_recipe 'rabbitmq::mgmt_console'
+if node['openstack']['mq']['enable_mgmt_console']
+  include_recipe 'rabbitmq::mgmt_console'
+end
 
 # TODO(mrv) This could be removed once support for this is added to the rabbitmq cookbook.
 # Issue: https://github.com/kennonkwok/rabbitmq/issues/136
