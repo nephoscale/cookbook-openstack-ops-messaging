@@ -49,7 +49,9 @@ if node['openstack']['mq']['cluster']
 end
 
 include_recipe 'rabbitmq'
-include_recipe 'rabbitmq::mgmt_console'
+if node['openstack']['mq']['enable_mgmt_console']
+  include_recipe 'rabbitmq::mgmt_console'
+end
 
 rabbitmq_user 'remove rabbit guest user' do
   user 'guest'

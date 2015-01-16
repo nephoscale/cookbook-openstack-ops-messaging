@@ -20,6 +20,7 @@
 #
 
 default['openstack']['mq']['cluster'] = false
+default['openstack']['mq']['enable_mgmt_console'] = true
 
 if platform_family?('debian', 'suse')
   override['rabbitmq']['use_distro_version'] = true

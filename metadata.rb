@@ -4,7 +4,7 @@ maintainer        'Chef Software, Inc.'
 maintainer_email  'matt@getchef.com'
 license           'Apache 2.0'
 description       'Provides the shared messaging configuration for Chef for OpenStack.'
-version           '8.0.1'
+version           '8.0.2'
 
 recipe 'server', 'Installs and configures server packages for messaging queue used by the deployment.'
 recipe 'rabbitmq-server', 'Installs and configures RabbitMQ and is called via the server recipe'
